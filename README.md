@@ -1,4 +1,4 @@
-#  Calculadora Sueldo Neto
+# 📊 Calculadora Sueldo Neto
 
 [![Website](https://img.shields.io/website?url=https%3A%2F%2Fcalculadora-sueldo-neto.es)](https://calculadora-sueldo-neto.es)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
@@ -26,27 +26,23 @@ Clona el repositorio y abre el proyecto en tu navegador:
 git clone https://github.com/TU-USUARIO/calculadora-sueldo-neto.git
 cd calculadora-sueldo-neto
 open index.html
-
----
+```
 
 ## 📸 Captura
 ![Screenshot](docs/screenshot.png)
 
----
 
 ## 🛠️ Tecnologías utilizadas
-- HTML5 + Tailwind CSS  
-- JavaScript (vanilla)  
-- GitHub Pages (para demo opcional)  
+HTML5 + Tailwind CSS
 
----
+JavaScript (vanilla)
+
+GitHub Pages (para demo opcional)
 
 ## 📈 Estado del proyecto
-✅ Versión inicial en producción  
-🔄 Mejoras futuras: optimización SEO, soporte internacional  
-
----
+✅ Versión inicial en producción
+🔄 Mejoras futuras: optimización SEO, soporte internacional
 
 ## 📄 Licencia
-Este proyecto está bajo licencia [MIT](LICENSE).  
+Este proyecto está bajo licencia MIT.
 Libre para usar, modificar y compartir con atribución.
