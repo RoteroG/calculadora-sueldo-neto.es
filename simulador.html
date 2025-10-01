@@ -1,0 +1,114 @@
+<!-- Onglets -->
+<div class="flex justify-center space-x-4 mb-6">
+  <button id="btn-rapido" onclick="mostrar('rapido')" class="px-4 py-2 bg-blue-600 text-white rounded">
+    Cálculo rápido
+  </button>
+  <button id="btn-preciso" onclick="mostrar('preciso')" class="px-4 py-2 bg-gray-200 rounded">
+    Cálculo preciso
+  </button>
+</div>
+
+<!-- Cálculo rápido -->
+<section id="rapido" class="block">
+  <h2 class="text-lg font-bold mb-2">Cálculo rápido de sueldo neto</h2>
+  <form id="form-rapido" class="space-y-4">
+    <div class="grid grid-cols-2 gap-4">
+      <div>
+        <label for="bruto-mensual-rapido" class="block text-sm font-medium">Sueldo bruto mensual (€)</label>
+        <input type="number" id="bruto-mensual-rapido" step="any"
+               class="w-full border rounded-lg p-2" placeholder="Ej: 2000">
+      </div>
+      <div>
+        <label for="bruto-anual-rapido" class="block text-sm font-medium">Sueldo bruto anual (€)</label>
+        <input type="number" id="bruto-anual-rapido" step="any"
+               class="w-full border rounded-lg p-2" placeholder="Ej: 28000" required>
+      </div>
+    </div>
+
+    <div>
+      <label for="pagas-rapido" class="block text-sm font-medium">Número de pagas</label>
+      <select id="pagas-rapido" class="w-full border rounded-lg p-2"></select>
+    </div>
+
+    <button type="submit" class="w-full bg-blue-600 text-white py-2 rounded-lg">Calcular</button>
+  </form>
+
+  <div id="resultado-rapido" class="mt-6 hidden text-center">
+    <p class="text-gray-600">Tu sueldo neto aproximado es:</p>
+    <p class="text-3xl font-bold text-green-600 mt-2"></p>
+  </div>
+</section>
+
+<!-- Cálculo preciso -->
+<section id="preciso" class="hidden">
+  <h2 class="text-lg font-bold mb-2">Cálculo preciso con IRPF y Seguridad Social</h2>
+  <form id="form-preciso" class="space-y-4">
+    <div class="grid grid-cols-2 gap-4">
+      <div>
+        <label for="bruto-mensual-preciso" class="block text-sm font-medium">Sueldo bruto mensual (€)</label>
+        <input type="number" id="bruto-mensual-preciso" step="any"
+               class="w-full border rounded-lg p-2" placeholder="Ej: 2000">
+      </div>
+      <div>
+        <label for="bruto-anual-preciso" class="block text-sm font-medium">Sueldo bruto anual (€)</label>
+        <input type="number" id="bruto-anual-preciso" step="any"
+               class="w-full border rounded-lg p-2" placeholder="Ej: 28000" required>
+      </div>
+    </div>
+
+    <div>
+      <label for="pagas" class="block text-sm font-medium">Número de pagas</label>
+      <select id="pagas" class="w-full border rounded-lg p-2"></select>
+    </div>
+
+    <div>
+      <label for="comunidad" class="block text-sm font-medium">Comunidad autónoma</label>
+      <select id="comunidad" class="w-full border rounded-lg p-2"></select>
+    </div>
+
+    <div>
+      <label for="edad" class="block text-sm font-medium">Edad</label>
+      <input type="number" id="edad" class="w-full border rounded-lg p-2" value="30" required>
+    </div>
+
+    <div>
+      <label for="contrato" class="block text-sm font-medium">Tipo de contrato</label>
+      <select id="contrato" class="w-full border rounded-lg p-2"></select>
+    </div>
+
+    <div>
+      <label class="block text-sm font-medium">Discapacidad contribuyente</label>
+      <div class="flex gap-4">
+        <label><input type="checkbox" id="disc_33_65"> 33% - 65%</label>
+        <label><input type="checkbox" id="disc_65"> ≥65%</label>
+        <label><input type="checkbox" id="disc_mov"> Movilidad reducida</label>
+      </div>
+    </div>
+
+    <!-- Hijos -->
+    <div>
+      <label class="block text-sm font-medium">Hijos a cargo</label>
+      <div id="hijos-lista" class="space-y-2"></div>
+      <button type="button" id="add-hijo" class="mt-2 px-3 py-1 bg-green-500 text-white rounded">
+        Añadir hijo
+      </button>
+    </div>
+
+    <!-- Ascendientes -->
+    <div>
+      <label class="block text-sm font-medium">Ascendientes a cargo</label>
+      <div id="asc-lista" class="space-y-2"></div>
+      <button type="button" id="add-asc" class="mt-2 px-3 py-1 bg-green-500 text-white rounded">
+        Añadir ascendiente
+      </button>
+    </div>
+
+    <button type="submit" class="w-full bg-blue-600 text-white py-2 rounded-lg">Calcular</button>
+  </form>
+
+  <div id="resultado-preciso" class="mt-6 hidden text-center">
+    <p class="text-gray-600">Tu sueldo neto estimado es:</p>
+    <p id="detalle" class="text-sm text-gray-500"></p>
+    <p class="text-3xl font-bold text-green-600 mt-2"></p>
+  </div>
+</section>
